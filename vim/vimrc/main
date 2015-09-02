@@ -1,0 +1,89 @@
+" this must be first, because it changes other options as a side effect
+set nocompatible
+
+set encoding=utf-8
+set fileencoding=utf-8
+
+filetype plugin on
+filetype indent on
+
+syntax on
+
+set background=dark
+
+set mouse=a
+set mousehide
+set ttymouse=xterm2
+set t_Co=256 " tell the term has 256 colors
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+set history=1000
+
+set showcmd
+set showmode
+
+set number
+set ruler
+set cursorline
+
+" display tabs and trailing spaces
+set list
+set listchars=eol:↵,tab:▸\ ,trail:•,nbsp:•,extends:»,precedes:«
+
+" search
+set incsearch
+set hlsearch
+set showmatch
+set ignorecase
+set smartcase
+
+" line wrapping
+set wrap
+set linebreak
+set textwidth=0
+
+" ~/.vim/undofiles directory should be manually created
+set undodir=~/.vim/undofiles
+set undofile
+
+" indent settings
+set noexpandtab
+set shiftwidth=4
+set tabstop=4
+
+set autoindent
+set smartindent
+
+" folding settings
+set foldmethod=indent
+set foldnestmax=3
+set foldenable
+set foldcolumn=2
+
+set showmatch
+
+" auto completion
+set wildmode=list:full
+set wildmenu
+set wildignore=*.o,*.obj,*~
+
+set formatoptions-=o " dont continue comments when pushing o/O
+set formatoptions-=r " do not automatically insert a comment leader after an enter
+set formatoptions-=t " do no auto-wrap text using textwidth (does not apply to comments)
+
+set scrolloff=4
+set sidescrolloff=7
+set sidescroll=1
+
+set hidden
+set nowritebackup
+set nobackup
+
+set nostartofline
+
+set showtabline=2
+
+set splitbelow
+set splitright

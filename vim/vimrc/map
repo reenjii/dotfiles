@@ -1,0 +1,52 @@
+" mappings
+
+" make <C-l> clear the highlight as well as redraw
+nnoremap <C-L> :nohls<CR><C-L>
+inoremap <C-L> <C-O>:nohls<CR>
+
+" map Q to something useful
+noremap Q gq
+
+" make Y consistent with C and D
+nnoremap Y y$
+
+" use F5 and F6 for tab navigation
+noremap <F5> :tabprev<CR>
+noremap <F6> :tabnext<CR>
+inoremap <F5> <ESC>:tabprev<CR>
+inoremap <F6> <ESC>:tabnext<CR>
+
+" use C-TAB C-S-TAB for tab navigation
+noremap <C-tab> :tabnext<CR>
+inoremap <C-tab> <ESC>:tabnext<CR>
+noremap <C-S-tab> :tabprev<CR>
+inoremap <C-S-tab> <ESC>:tabprev<CR>
+
+" use C-q to quit and C-s to save all tabs
+noremap <C-Q> :q<CR>
+inoremap <C-Q> <ESC>:q<CR>
+noremap <C-S> :wa<CR>
+inoremap <C-S> <ESC>:wa<CR>
+
+" folding
+noremap <F2> za
+inoremap <F2> <ESC>za
+noremap <F3> :%foldclose!<CR>
+inoremap <F3> <ESC>:%foldclose!<CR>
+noremap <F4> :%foldopen!<CR>
+inoremap <F4> <ESC>:%foldopen!<CR>
+
+" toggle between expandtabs and noexpandtabs
+function TabToggle()
+  if &expandtab
+    set shiftwidth=4
+    set softtabstop=0
+    set noexpandtab
+  else
+    set shiftwidth=4
+    set softtabstop=4
+    set expandtab
+  endif
+endfunction
+noremap <F9> mz:execute TabToggle()<CR>'z
+inoremap <F9> <ESC>mz:execute TabToggle()<CR>'z

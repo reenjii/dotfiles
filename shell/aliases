@@ -1,0 +1,66 @@
+# aliases
+
+### ls ###
+alias ls='ls --color'
+alias ll='ls -lAFh'
+alias l='ls -CF'
+alias li='ls -l'
+alias la='ls -CAF'
+alias lll='ls -lFh'
+alias ms=ls
+alias sl=ls
+alias lq=ls
+###
+
+### grep ###
+alias grep='grep --color=auto'
+alias gi='grep -i' # case insensitive
+alias gn='grep -n' # line numbers
+alias gin='grep -in' # case insensitive + line numbers
+###
+
+### cd ###
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias cd..='cd ..'
+alias u='cd ..'
+alias uu='cd ../..'
+alias uuu='cd ../../..'
+###
+
+### cp mv rm pwd ###
+alias rm='rm -iv' # confirm before rm
+alias cp='cp -v'
+alias mv='mv -v'
+alias p=pwd
+###
+
+### htop processes of current user ###
+alias h="htop -u \$(whoami)"
+###
+
+### indent args for C/C++ ###
+alias indentC='indent -bad -bap -bbb -sob -bli0 -cli2 -cbi0 -nss -pcs -ncs -saf -sai -saw -nprs -nbc -di0 -nbfda -npsl -bls -blf -i2 -ci0 -nip -l80 -bbo -v -pmt'
+###
+
+### screen ###
+alias sls='screen -ls'
+alias srd='screen -rd'
+alias S='screen -S'
+alias sdm='screen -Sdm'
+###
+
+### vim ###
+alias vi='vim'
+alias vil='vim'
+alias v='vim'
+alias vtabs="vim -p" # with multiple files in tabs
+alias vsplit='vim -O' # vertical split several files
+alias hsplit='vim -o' # horizontal split several files
+alias svim="sudo vim" # vim as root
+###
+
+### miscellaneous ###
+alias rot13='tr a-zA-Z n-za-mN-ZA-M'
+###

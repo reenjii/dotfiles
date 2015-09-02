@@ -1,2 +1,2 @@
 # dotfiles
-Dotfiles
+This repository contains my dotfiles configuration.

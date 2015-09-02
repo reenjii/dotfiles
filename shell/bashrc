@@ -1,0 +1,9 @@
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+. ~/.shell/env
+. ~/.shell/aliases
+. ~/.shell/colors
+
+# oh-my-zsh xiong-chiamiov's theme prompt style
+PS1="\n${BBlue}\342\224\214\342\224\200[$(if [[ ${EUID} == 0 ]]; then echo "${BRed}\u"; else echo "${BGreen}\u"; fi)${White}@${Cyan}\h${BBlue}]${White} - ${BBlue}[${BWhite}\w${BBlue}]${White} - ${BBlue}[${Yellow}\d, \@${BBlue}]${BBlue}\n\342\224\224\342\224\200[${BIPurple}\$${BBlue}]> $Color_Off"

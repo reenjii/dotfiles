@@ -1,0 +1,9 @@
+" restore position in files
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+au BufRead,BufNewFile {*.md,*.mkd,*.markdown} set ft=markdown
+au BufRead,BufNewFile {COMMIT_EDITMSG}        set ft=gitcommit
+au BufRead,BufNewFile {*/vimrc/*}             set syn=vim
+
+" remove trailing spaces on save
+autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> :%s/\s\+$//e

@@ -1,0 +1,13 @@
+startup_message off
+autodetach on
+defutf8 on
+vbell off
+hardstatus alwayslastline '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m/%Y %{W}%c:%s %{g}]'
+bind f eval "hardstatus ignore"
+bind F eval "hardstatus alwayslastline"
+bind = resize =
+bind + resize +1
+bind - resize -1
+bind _ resize max
+bind j focus down
+bind k focus up

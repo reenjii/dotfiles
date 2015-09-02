@@ -1,0 +1,30 @@
+" Vundle - https://github.com/VundleVim/Vundle.vim
+
+" required
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" plugin on GitHub repo
+Plugin 'beyondwords/vim-twig.git'
+Plugin 'rstacruz/sparkup'
+
+" git integration
+Plugin 'git.zip'
+Plugin 'fugitive.vim'
+
+" vim-scripts repos
+Plugin 'Markdown'
+Plugin 'jQuery'
+Plugin 'tComment'
+nnoremap // :TComment<CR>
+vnoremap // :TComment<CR>
+
+call vundle#end()
+filetype plugin indent on
+
