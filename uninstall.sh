@@ -74,6 +74,12 @@ do
 	rmlink "$HOME/.${file}rc"
 done
 
+# Uninstall custom oh-my-zsh theme
+if [ -f "$OH_MY_ZSH/custom/themes/reenjii.zsh-theme" ]
+then
+	rm -v -f "$OH_MY_ZSH/custom/themes/reenjii.zsh-theme"
+fi
+
 # Vim
 rmlink "$HOME/.vimrc"
 rmlink "$HOME/.vim/vimrc"

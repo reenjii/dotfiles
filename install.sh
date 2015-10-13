@@ -104,6 +104,14 @@ do
 	checklink "$HOME/.${file}rc" "$DOTFILES/config/$file/${file}rc"
 done
 
+# Install custom oh-my-zsh theme
+if [ -d "$OH_MY_ZSH" ]
+then
+	echo "[I] Install oh-my-zsh custom theme"
+	mkdir -v -p "$OH_MY_ZSH/custom/themes"
+	cp -v "$DOTFILES/oh-my-zsh/custom/themes/reenjii.zsh-theme" "$OH_MY_ZSH/custom/themes/"
+fi
+
 # Vim
 checklink "$HOME/.vimrc" "$DOTFILES/vim/vimrc/vimrc"
 checklink "$HOME/.vim/vimrc" "$DOTFILES/vim/vimrc"
