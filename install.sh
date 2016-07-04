@@ -104,6 +104,9 @@ do
 	checklink "$HOME/.${file}rc" "$DOTFILES/config/$file/${file}rc"
 done
 
+# git
+checklink "$HOME/.gitconfig" "$DOTFILES/git/gitconfig"
+
 # Install custom oh-my-zsh theme
 if [ -d "$OH_MY_ZSH" ]
 then
