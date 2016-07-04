@@ -15,6 +15,7 @@ set mouse=a
 set mousehide
 set ttymouse=xterm2
 set t_Co=256 " tell the term has 256 colors
+colorscheme solarized
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -61,6 +62,7 @@ set foldmethod=indent
 set foldnestmax=3
 set foldenable
 set foldcolumn=2
+set foldlevelstart=20
 
 set showmatch
 
@@ -87,3 +89,34 @@ set showtabline=2
 
 set splitbelow
 set splitright
+
+" Go vim - :help go-settings
+let g:go_fmt_command = "goimports"
+" Do not open browser
+let g:go_play_open_browser = 0
+" Run GoFmt on save
+let g:go_fmt_autosave = 1
+" Do not open a quickfix window on GoFmt
+let g:go_fmt_fail_silently = 1
+" Highlight instances of tabs following spaces
+let g:go_highlight_space_tab_error = 1
+" Highlight Functions, Methods and Structs
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+" Solve lag issued with syntastic
+"let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+"let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:go_list_type = "quickfix"
+
+
+" syntastic
+" use leader+e to display errors in a split
+noremap <leader>e :Errors<CR>
+" list of go_checkers
+let g:syntastic_go_checkers = ['go', 'gofmt', 'golint' , 'govet']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 2

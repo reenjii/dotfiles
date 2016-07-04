@@ -54,6 +54,8 @@ alias sdm='screen -Sdm'
 ### vim ###
 alias vi='vim'
 alias vil='vim'
+alias vin='vim'
+alias bim='vim'
 alias v='vim'
 alias vtabs="vim -p" # with multiple files in tabs
 alias vsplit='vim -O' # vertical split several files
@@ -63,4 +65,18 @@ alias svim="sudo vim" # vim as root
 
 ### miscellaneous ###
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
+alias c='paste -d" " <((echo -n "   "; ncal -w | tail -1 )| fold -w 3) <(cal)'
 ###
+
+### json tools ###
+alias json='python -m json.tool | pygmentize -l json'
+function jsonflow {
+	while read -r line; do
+		echo "$line" | python -m json.tool | pygmentize -l json
+	done;
+}
+
+### print given line range (e.g.: lines 11,42 file.txt) ###
+function lines {
+	sed -n $1p $2
+}

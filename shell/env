@@ -22,10 +22,19 @@ export LC_NUMERIC=$LANG
 export LC_TIME=$LANG
 
 # go
+export GOROOT="${HOME}/goroot/go"
 export GOPATH="${HOME}/go"
+pathprepend "${GOROOT}/bin" PATH
+pathprepend "${GOPATH}/bin" PATH
+
+# rlwrap home
+export RLWRAP_HOME="${HOME}/.rlwrap"
 
 # Path settings
-pathappend "${HOME}/bin" PATH
+pathprepend "${HOME}/bin" PATH
+pathprepend "${HOME}/usr/bin" PATH
+pathprepend "${HOME}/.local/bin" PATH
+pathprepend "${HOME}/node/node-v4.4.4-linux-x64/bin" PATH
 
 # The current directory should never be in $PATH
 pathremove "." PATH

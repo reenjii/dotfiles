@@ -1,5 +1,9 @@
 " mappings
 
+" best mapping ever
+nnoremap ; :
+vnoremap ; :
+
 " make <C-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
@@ -50,3 +54,10 @@ function TabToggle()
 endfunction
 noremap <F9> mz:execute TabToggle()<CR>'z
 inoremap <F9> <ESC>mz:execute TabToggle()<CR>'z
+
+" commands
+command Pl set filetype=perl
+
+" tComment plugin
+nnoremap // :TComment<CR>
+vnoremap // :TComment<CR>

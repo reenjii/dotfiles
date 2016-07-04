@@ -6,4 +6,7 @@ au BufRead,BufNewFile {COMMIT_EDITMSG}        set ft=gitcommit
 au BufRead,BufNewFile {*/vimrc/*}             set syn=vim
 
 " remove trailing spaces on save
-autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType c,cpp,java,php,perl autocmd BufWritePre <buffer> :%s/\s\+$//e
+
+" expandtabs for Perl files
+autocmd FileType perl set expandtab

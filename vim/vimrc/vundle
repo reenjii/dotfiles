@@ -10,20 +10,65 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" plugin on GitHub repo
-Plugin 'beyondwords/vim-twig.git'
+""""""""""
+" Github "
+""""""""""
+
+" Sparkup lets you write HTML code faster
+" ul > li.class$*3 then press <C-E>
 Plugin 'rstacruz/sparkup'
 
-" git integration
+" Support for twig templates
+Plugin 'beyondwords/vim-twig.git'
+
+" Markdown
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
+" golang
+Plugin 'fatih/vim-go'
+Plugin 'scrooloose/syntastic'
+
+" Solarized color scheme
+Plugin 'altercation/vim-colors-solarized'
+
+" ctrlp file explorer
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" easymotion
+Plugin 'easymotion/vim-easymotion'
+
+" nice status bar
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+" ctrl space
+Plugin 'vim-ctrlspace/vim-ctrlspace'
+
+" tmux line
+Plugin 'edkolev/tmuxline.vim'
+
+" csv tools
+Plugin 'chrisbra/csv.vim'
+
+" toml syntax
+Plugin 'cespare/vim-toml'
+
+"""""""""""""""
+" vim-scripts "
+"""""""""""""""
+
+" Git
+" syntax for git files
 Plugin 'git.zip'
+" Git wrapper
 Plugin 'fugitive.vim'
 
-" vim-scripts repos
-Plugin 'Markdown'
+" Syntax for jQuery
 Plugin 'jQuery'
+
+" Toggle comment
 Plugin 'tComment'
-nnoremap // :TComment<CR>
-vnoremap // :TComment<CR>
 
 call vundle#end()
 filetype plugin indent on

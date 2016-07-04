@@ -1,5 +1,5 @@
+source ~/.vim/vimrc/vundle
 source ~/.vim/vimrc/main
 source ~/.vim/vimrc/autocommands
 source ~/.vim/vimrc/map
 source ~/.vim/vimrc/statusline
-source ~/.vim/vimrc/vundle
