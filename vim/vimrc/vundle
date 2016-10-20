@@ -28,6 +28,7 @@ Plugin 'plasticboy/vim-markdown'
 " golang
 Plugin 'fatih/vim-go'
 Plugin 'scrooloose/syntastic'
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
 
 " Solarized color scheme
 Plugin 'altercation/vim-colors-solarized'
@@ -46,13 +47,33 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-ctrlspace/vim-ctrlspace'
 
 " tmux line
-Plugin 'edkolev/tmuxline.vim'
+"Plugin 'edkolev/tmuxline.vim'
 
 " csv tools
 Plugin 'chrisbra/csv.vim'
 
 " toml syntax
 Plugin 'cespare/vim-toml'
+
+" Snippets
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+" ctags
+Plugin 'majutsushi/tagbar'
+
+" editorconfig
+Plugin 'editorconfig/editorconfig-vim'
+
+" css
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'groenewege/vim-less'
+
+" javascript
+Plugin 'othree/javascript-libraries-syntax.vim'
 
 """""""""""""""
 " vim-scripts "
@@ -69,6 +90,9 @@ Plugin 'jQuery'
 
 " Toggle comment
 Plugin 'tComment'
+
+" Syntax for gnuplot
+Plugin 'gnuplot.vim'
 
 call vundle#end()
 filetype plugin indent on

@@ -14,9 +14,10 @@ alias lq=ls
 
 ### grep ###
 alias grep='grep --color=auto'
-alias gi='grep -i' # case insensitive
-alias gn='grep -n' # line numbers
-alias gin='grep -in' # case insensitive + line numbers
+alias gi='grep -i'     # case insensitive
+alias gn='grep -n'     # line numbers
+alias gin='grep -in'   # case insensitive + line numbers
+alias grin='grep -Rin' # recursive + case insensitive + line numbers
 ###
 
 ### cd ###
@@ -56,8 +57,7 @@ alias vi='vim'
 alias vil='vim'
 alias vin='vim'
 alias bim='vim'
-alias v='vim'
-alias vtabs="vim -p" # with multiple files in tabs
+alias vtabs="vim -p"  # with multiple files in tabs
 alias vsplit='vim -O' # vertical split several files
 alias hsplit='vim -o' # horizontal split several files
 alias svim="sudo vim" # vim as root
