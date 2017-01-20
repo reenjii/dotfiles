@@ -90,6 +90,8 @@ set showtabline=2
 set splitbelow
 set splitright
 
+set clipboard^=unnamed,unnamedplus
+
 " Go vim - :help go-settings
 let g:go_fmt_command = "goimports"
 " Do not open browser

@@ -52,6 +52,12 @@ alias S='screen -S'
 alias sdm='screen -Sdm'
 ###
 
+#### tmux ###
+alias tls='tmux list-sessions'
+alias tn='tmux new -s'
+alias ta='tmux attach -t'
+###
+
 ### vim ###
 alias vi='vim'
 alias vil='vim'
@@ -68,15 +74,11 @@ alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 alias c='paste -d" " <((echo -n "   "; ncal -w | tail -1 )| fold -w 3) <(cal)'
 ###
 
-### json tools ###
-alias json='python -m json.tool | pygmentize -l json'
-function jsonflow {
-	while read -r line; do
-		echo "$line" | python -m json.tool | pygmentize -l json
-	done;
-}
-
 ### print given line range (e.g.: lines 11,42 file.txt) ###
 function lines {
 	sed -n $1p $2
 }
+
+### docker ###
+alias drmae='docker rm $(docker ps -qa --no-trunc --filter "status=exited")'
+alias drmi='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'

@@ -3,8 +3,8 @@
 umask 0022
 
 # Personal information
-export NAME='Benjamin Herlin'
-export EMAIL='benjaminherlin@gmail.com'
+export NAME="Benjamin Ziehms"
+export EMAIL="benjaminherlin@gmail.com"
 
 # Preferred programs
 export PAGER=less
@@ -34,7 +34,6 @@ export RLWRAP_HOME="${HOME}/.rlwrap"
 pathprepend "${HOME}/bin" PATH
 pathprepend "${HOME}/usr/bin" PATH
 pathprepend "${HOME}/.local/bin" PATH
-pathprepend "${HOME}/node/node-v4.4.4-linux-x64/bin" PATH
 
 # The current directory should never be in $PATH
 pathremove "." PATH
