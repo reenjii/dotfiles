@@ -34,6 +34,10 @@
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	ls = ls-files
+	fv = fetch -v
+	fvp = fetch -v --prune
+	pv = pull -v
+	pvp = pull -v --prune
 [push]
 	default = tracking
 [core]
