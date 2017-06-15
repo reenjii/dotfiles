@@ -64,7 +64,13 @@ vnoremap // :TComment<CR>
 
 " Tagbar
 noremap <F8> :TagbarToggle<CR>
-inoremap <F8> :TagbarToggle<CR>
+inoremap <F8> <ESC>:TagbarToggle<CR>
 
 " Indent JSON
 nmap =j :%!python -m json.tool<CR>
+
+" Go
+noremap <C-f> :GoFmt<CR>
+inoremap <C-f> <ESC>:GoFmt<CR>
+noremap <C-i> :GoImports<CR>
+inoremap <C-i> <ESC>:GoImports<CR>

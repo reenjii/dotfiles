@@ -82,3 +82,6 @@ function lines {
 ### docker ###
 alias drmae='docker rm $(docker ps -qa --no-trunc --filter "status=exited")'
 alias drmi='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
+
+# go
+alias gbv="go build -v"
