@@ -104,6 +104,9 @@ do
 	checklink "$HOME/.${file}rc" "$DOTFILES/config/$file/${file}rc"
 done
 
+# tmux config
+checklink "$HOME/.tmux.conf" "$DOTFILES/config/tmux/tmux.conf"
+
 # git
 checklink "$HOME/.gitconfig" "$DOTFILES/git/gitconfig"
 
