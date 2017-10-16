@@ -2,6 +2,8 @@
 
 umask 0022
 
+export TERM="xterm-256color"
+
 # Personal information
 export NAME="Benjamin Ziehms"
 export EMAIL="benjaminherlin@gmail.com"

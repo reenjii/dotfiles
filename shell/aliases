@@ -85,3 +85,6 @@ alias drmi='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
 
 # go
 alias gbv="go build -v"
+alias gtv="go test -v"
+alias gim='goimports -l $(find . -type f -name "*.go" -not -path "./vendor/*")'
+alias gfmt='gofmt -l $(find . -type f -name "*.go" -not -path "./vendor/*")'

@@ -51,3 +51,17 @@ pathappend () {
 ssource () {
 	[[ -r "$1" ]] && . "$1"
 }
+
+# List all tmux panes.
+# Output is
+# <session_name>#<window_index>.<pane_index> <window_name>
+#   <pstree of pane>
+tmuxls () {
+	while read -r pane
+	do
+		IFS="|" read PANE_ID PANE_INDEX WINDOW_INDEX SESSION_NAME WINDOW_NAME <<< "$pane"
+		echo "${SESSION_NAME}#${WINDOW_INDEX}.${PANE_INDEX} ${WINDOW_NAME}"
+		pstree -p -a -U "$PANE_ID" | sed 's/^/  /'
+		echo "-----"
+	done <<< $(tmux list-panes -a -F "#{pane_pid}|#{pane_index}|#{window_index}|#{session_name}|#{window_name}")
+}
