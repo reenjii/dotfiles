@@ -34,7 +34,7 @@ function fetch_repo {
     local dir=$2
     if [[ -d "$dir" ]]; then
         info "Update $dir"
-        git --git-dir "${dir}/.git" pull
+        git -C "$dir" pull
     else
         info "Clone $repo"
         git clone "$repo" "$dir"
@@ -128,6 +128,8 @@ if [[ $# -gt 0 ]]; then
 
             # Install oh-my-zsh
             fetch_repo "git://github.com/robbyrussell/oh-my-zsh.git" "$OH_MY_ZSH"
+            # Install powerlevel9k for zsh
+            fetch_repo https://github.com/bhilburn/powerlevel9k.git "$OH_MY_ZSH/custom/themes/powerlevel9k"
 
             # Symbolic link for shell folder
             make_link "$DOTFILES/shell" "$HOME/.shell"
