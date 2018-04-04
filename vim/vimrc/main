@@ -149,3 +149,6 @@ let g:syntastic_go_checkers = ['go', 'gofmt', 'golint' , 'govet', 'errcheck']
 
 " Javascript syntax
 "let g:used_javascript_libs = 'angularjs,angularui'
+
+" supertab
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"

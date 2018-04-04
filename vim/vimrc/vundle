@@ -39,6 +39,9 @@ Plugin 'airblade/vim-gitgutter'
 " ctrlp file explorer
 Plugin 'ctrlpvim/ctrlp.vim'
 
+" supertab
+Plugin 'ervandew/supertab'
+
 " ctrl space
 Plugin 'vim-ctrlspace/vim-ctrlspace'
 
