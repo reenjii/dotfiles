@@ -42,5 +42,6 @@
 	default = tracking
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore
 [merge]
 	tool = vimdiff

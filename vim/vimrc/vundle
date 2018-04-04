@@ -14,40 +14,55 @@ Plugin 'VundleVim/Vundle.vim'
 " Github "
 """"""""""
 
-" Sparkup lets you write HTML code faster
-" ul > li.class$*3 then press <C-E>
-Plugin 'rstacruz/sparkup'
-
-" Support for twig templates
-Plugin 'beyondwords/vim-twig.git'
-
-" Markdown
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-
-" golang
-Plugin 'fatih/vim-go'
-Plugin 'scrooloose/syntastic'
-Plugin 'nsf/gocode', {'rtp': 'vim/'}
-
 " Solarized color scheme
 Plugin 'altercation/vim-colors-solarized'
-
-" ctrlp file explorer
-Plugin 'ctrlpvim/ctrlp.vim'
-
-" easymotion
-Plugin 'easymotion/vim-easymotion'
 
 " nice status bar
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+" undotree
+Plugin 'mbbill/undotree'
+
+" golang
+Plugin 'fatih/vim-go'
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plugin 'vim-syntastic/syntastic'
+
+" Git
+" Git wrapper
+Plugin 'tpope/vim-fugitive'
+" Show git diff in gutter
+Plugin 'airblade/vim-gitgutter'
+"Plugin 'mhinz/vim-signify'
+
+" ctrlp file explorer
+Plugin 'ctrlpvim/ctrlp.vim'
+
 " ctrl space
 Plugin 'vim-ctrlspace/vim-ctrlspace'
 
-" tmux line
-"Plugin 'edkolev/tmuxline.vim'
+" nerdtree & nerdcommenter
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'scrooloose/nerdcommenter'
+
+" easymotion
+Plugin 'easymotion/vim-easymotion'
+
+" editorconfig
+Plugin 'editorconfig/editorconfig-vim'
+
+" Sparkup lets you write HTML code faster
+" ul > li.class$*3 then press <C-E>
+"Plugin 'rstacruz/sparkup'
+
+" Twig templates
+Plugin 'lumiliet/vim-twig'
+
+" Markdown
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " csv tools
 Plugin 'chrisbra/csv.vim'
@@ -57,16 +72,13 @@ Plugin 'cespare/vim-toml'
 
 " Snippets
 " Track the engine.
-Plugin 'SirVer/ultisnips'
+"Plugin 'SirVer/ultisnips'
 
 " Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
+"Plugin 'honza/vim-snippets'
 
 " ctags
-Plugin 'majutsushi/tagbar'
-
-" editorconfig
-Plugin 'editorconfig/editorconfig-vim'
+"Plugin 'majutsushi/tagbar'
 
 " css
 Plugin 'hail2u/vim-css3-syntax'
@@ -85,14 +97,6 @@ Plugin 'elzr/vim-json'
 " Git
 " syntax for git files
 Plugin 'git.zip'
-" Git wrapper
-Plugin 'fugitive.vim'
-
-" Syntax for jQuery
-Plugin 'jQuery'
-
-" Toggle comment
-Plugin 'tComment'
 
 " Syntax for gnuplot
 Plugin 'gnuplot.vim'

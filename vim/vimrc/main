@@ -103,37 +103,49 @@ let g:go_fmt_fail_silently = 1
 " Highlight instances of tabs following spaces
 let g:go_highlight_space_tab_error = 1
 " Highlight Functions, Methods and Structs
+let g:go_highlight_types = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_build_constraints = 1
+
+" Metalinter
+let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+let g:go_metalinter_deadline = "5s"
 " Solve lag issued with syntastic
 "let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-let g:go_list_type = "quickfix"
 
+" always use quickfix and never location lists
+let g:go_list_type = "quickfix"
 
 " syntastic
 " use leader+e to display errors in a split
-noremap <leader>e :Errors<CR>
+" noremap <leader>e :Errors<CR>
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " list of go_checkers
 let g:syntastic_go_checkers = ['go', 'gofmt', 'golint' , 'govet', 'errcheck']
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 2
 
 " list of javascript_checkers
-let g:syntastic_javascript_checkers = ['jscs', 'jshint']
+"let g:syntastic_javascript_checkers = ['jscs', 'jshint']
 
 " Snippets
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+"let g:UltiSnipsEditSplit="vertical"
 
 " Javascript syntax
-let g:used_javascript_libs = 'angularjs,angularui'
+"let g:used_javascript_libs = 'angularjs,angularui'

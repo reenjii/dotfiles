@@ -5,6 +5,7 @@ DOTFILES="$HOME/dotfiles"
 
 # oh-my-zsh install folder
 OH_MY_ZSH="$HOME/.oh-my-zsh"
+VUNDLE="$HOME/.vim/bundle/Vundle.vim"
 
 # Check that a given command exists
 need_cmd() {
@@ -80,36 +81,6 @@ function unmake_link {
     fi
 }
 
-# Install SpaceVim and custom configuration
-function install_spacevim {
-    info "Install SpaceVim"
-
-    local SVD="$HOME/.SpaceVim.d"
-    [[ ! -d "$SVD" ]] && mkdir -vp "$SVD"
-
-    # Install SpaceVim custom config
-    make_link "$DOTFILES/vim/SpaceVim.d/init.vim" "$SVD/init.vim"
-
-    # Install SpaceVim
-    curl -sLf https://spacevim.org/install.sh | bash
-    info "SpaceVim install complete"
-}
-
-# Uninstall SpaceVim and custom configuration
-function uninstall_spacevim {
-    info "Uninstall SpaceVim"
-
-    local SVD="$HOME/.SpaceVim.d"
-    [[ ! -d "$SVD" ]] && mkdir -vp "$SVD"
-
-    # Uninstall SpaceVim custom config
-    unmake_link "$DOTFILES/vim/SpaceVim.d/init.vim" "$SVD/init.vim"
-
-    # Uninstall SpaceVim
-    curl -sLf https://spacevim.org/install.sh | bash -s -- --uninstall
-    info "SpaceVim uninstall complete"
-}
-
 usage () {
     echo "dotfiles install script"
     echo ""
@@ -146,8 +117,14 @@ if [[ $# -gt 0 ]]; then
             # git
             make_link "$DOTFILES/git/gitconfig" "$HOME/.gitconfig"
 
-            install_spacevim
+            # Vim
+            # Install Vundle
+            fetch_repo "https://github.com/VundleVim/Vundle.vim.git" "$VUNDLE"
+            make_link "$DOTFILES/vim/vimrc/vimrc" "$HOME/.vimrc"
+            make_link "$DOTFILES/vim/vimrc" "$HOME/.vim/vimrc"
+            mkdir "$HOME/.vim/undofiles" 2> /dev/null
 
+            info "Install complete"
             exit 0
             ;;
         uninstall|u)
@@ -175,10 +152,11 @@ if [[ $# -gt 0 ]]; then
             # git
             unmake_link "$DOTFILES/git/gitconfig" "$HOME/.gitconfig"
 
-            # Uninstall SpaceVim
-            uninstall_spacevim
+            # Vim
+            unmake_link "$DOTFILES/vim/vimrc/vimrc" "$HOME/.vimrc"
+            unmake_link "$DOTFILES/vim/vimrc" "$HOME/.vim/vimrc"
 
-            info "Install complete"
+            info "Uninstall complete"
             exit 0
             ;;
         --help|-h)

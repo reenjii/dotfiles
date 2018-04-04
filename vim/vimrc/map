@@ -74,3 +74,10 @@ noremap <C-f> :GoFmt<CR>
 inoremap <C-f> <ESC>:GoFmt<CR>
 noremap <C-i> :GoImports<CR>
 inoremap <C-i> <ESC>:GoImports<CR>
+" navigate through errors
+noremap <C-n> :cnext<CR>
+noremap <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+
+" NERDTree
+noremap <C-n> :NERDTreeToggle<CR>

@@ -17,7 +17,7 @@ autocmd FileType perl set expandtab
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <leader>c <Plug>(go-coverage-toggle)
 au FileType go nmap <leader>f :GoFmt<CR>
 
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
@@ -32,3 +32,6 @@ au FileType go nmap <Leader>s <Plug>(go-implements)
 au FileType go nmap <Leader>i <Plug>(go-info)
 
 au FileType go nmap <Leader>e <Plug>(go-rename)
+
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
