@@ -3,7 +3,7 @@
 # dotfiles folder
 DOTFILES="$HOME/dotfiles"
 
-# oh-my-zsh install folder
+# ohmyzsh install folder
 OH_MY_ZSH="$HOME/.oh-my-zsh"
 VUNDLE="$HOME/.vim/bundle/Vundle.vim"
 
@@ -38,7 +38,7 @@ function fetch_repo {
         git -C "$dir" pull
     else
         info "Clone $repo"
-        git clone "$repo" "$dir"
+        git clone --depth=1 "$repo" "$dir"
     fi
 }
 
@@ -98,9 +98,9 @@ if [[ $# -gt 0 ]]; then
             need_cmd 'ln'
 
             # Install oh-my-zsh
-            fetch_repo "git://github.com/robbyrussell/oh-my-zsh.git" "$OH_MY_ZSH"
-            # Install powerlevel9k for zsh
-            fetch_repo https://github.com/bhilburn/powerlevel9k.git "$OH_MY_ZSH/custom/themes/powerlevel9k"
+            fetch_repo "git://github.com/ohmyzsh/ohmyzsh.git" "$OH_MY_ZSH"
+            # Install powerlevel10k for zsh
+            fetch_repo https://github.com/romkatv/powerlevel10k.git "$OH_MY_ZSH/custom/themes/powerlevel10k"
 
             # Symbolic link for shell folder
             make_link "$DOTFILES/shell" "$HOME/.shell"
