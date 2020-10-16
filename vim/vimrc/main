@@ -115,7 +115,7 @@ let g:go_highlight_build_constraints = 1
 
 " Metalinter
 let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
-let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave = 0
 let g:go_metalinter_autosave_enabled = ['vet', 'golint']
 let g:go_metalinter_deadline = "5s"
 " Solve lag issued with syntastic
@@ -128,12 +128,13 @@ let g:go_list_type = "quickfix"
 " use leader+e to display errors in a split
 " noremap <leader>e :Errors<CR>
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " list of go_checkers
-let g:syntastic_go_checkers = ['go', 'gofmt', 'golint' , 'govet', 'errcheck']
+"let g:syntastic_go_checkers = ['go', 'gofmt', 'golint' , 'govet', 'errcheck']
+let g:syntastic_go_checkers = ['go', 'gofmt']
 
 " list of javascript_checkers
 "let g:syntastic_javascript_checkers = ['jscs', 'jshint']
