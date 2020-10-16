@@ -21,23 +21,11 @@
 	changed = green
 	untracked = cyan
 [alias]
-	st = status
-	ci = commit
-	br = branch
-	co = checkout
-	df = diff
-	dc = diff --cached
-	dw = diff -w
-	ds = diff --word-diff-regex=\"[A-Za-z0-9. ]|[^[:space:]]\"
-	dss = diff --word-diff-regex=\"[A-Za-z0-9. ]|[^[:space:]]\" --word-diff=color
-	lg = log -p
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit
-	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	ls = ls-files
 	fv = fetch -v
 	fvp = fetch -v --prune
 	pv = pull -v
 	pvp = pull -v --prune
+	gone = "!git branch -avv | grep gone"
 [push]
 	default = tracking
 [core]
@@ -45,3 +33,7 @@
 	excludesfile = ~/.gitignore
 [merge]
 	tool = vimdiff
+[commit]
+	gpgSign = true
+[include]
+  path = ~/dotfiles/git/gitalias.txt
