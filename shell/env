@@ -24,9 +24,7 @@ export LC_NUMERIC=$LANG
 export LC_TIME=$LANG
 
 # go
-export GOROOT="${HOME}/goroot/go"
 export GOPATH="${HOME}/go"
-pathprepend "${GOROOT}/bin" PATH
 pathprepend "${GOPATH}/bin" PATH
 
 # rlwrap home

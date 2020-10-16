@@ -24,10 +24,12 @@ alias grin='grep -Rin' # recursive + case insensitive + line numbers
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias .....='cd ../../../..'
 alias cd..='cd ..'
 alias u='cd ..'
 alias uu='cd ../..'
 alias uuu='cd ../../..'
+alias uuuu='cd ../../../..'
 ###
 
 ### cp mv rm pwd ###
@@ -69,22 +71,26 @@ alias hsplit='vim -o' # horizontal split several files
 alias svim="sudo vim" # vim as root
 ###
 
-### miscellaneous ###
-alias rot13='tr a-zA-Z n-za-mN-ZA-M'
-alias c='paste -d" " <((echo -n "   "; ncal -w | tail -1 )| fold -w 3) <(cal)'
-###
-
 ### print given line range (e.g.: lines 11,42 file.txt) ###
 function lines {
-	sed -n $1p $2
+    sed -n $1p $2
 }
 
 ### docker ###
-alias drmae='docker rm $(docker ps -qa --no-trunc --filter "status=exited")'
-alias drmi='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
+alias d='docker'
+alias dc='docker-compose'
+###
 
 # go
 alias gbv="go build -v"
 alias gtv="go test -v"
 alias gim='goimports -l $(find . -type f -name "*.go" -not -path "./vendor/*")'
 alias gfmt='gofmt -l $(find . -type f -name "*.go" -not -path "./vendor/*")'
+###
+
+### miscellaneous ###
+alias rot13='tr a-zA-Z n-za-mN-ZA-M'
+alias c='paste -d" " <((echo -n "   "; ncal -w | tail -1 )| fold -w 3) <(cal)'
+alias s='supervisorctl'
+###
+
