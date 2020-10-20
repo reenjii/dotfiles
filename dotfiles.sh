@@ -105,6 +105,7 @@ if [[ $# -gt 0 ]]; then
             fetch_repo https://github.com/zsh-users/zsh-syntax-highlighting.git "$OH_MY_ZSH/custom/plugins/zsh-syntax-highlighting"
             # Install zsh-autosuggestions
             fetch_repo https://github.com/zsh-users/zsh-autosuggestions "$OH_MY_ZSH/custom/plugins/zsh-autosuggestions"
+            make_link "$DOTFILES/oh-my-zsh/custom/zsh-autosuggestions.zsh" "$OH_MY_ZSH/custom/zsh-autosuggestions.zsh"
 
             # Symbolic link for shell folder
             make_link "$DOTFILES/shell" "$HOME/.shell"
