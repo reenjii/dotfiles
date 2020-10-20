@@ -76,6 +76,10 @@ function lines {
     sed -n $1p $2
 }
 
+### git ###
+alias g='git'
+###
+
 ### docker ###
 alias d='docker'
 alias dc='docker-compose'
