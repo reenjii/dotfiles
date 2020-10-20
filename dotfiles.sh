@@ -101,6 +101,10 @@ if [[ $# -gt 0 ]]; then
             fetch_repo "git://github.com/ohmyzsh/ohmyzsh.git" "$OH_MY_ZSH"
             # Install powerlevel10k for zsh
             fetch_repo https://github.com/romkatv/powerlevel10k.git "$OH_MY_ZSH/custom/themes/powerlevel10k"
+            # Install zsh-syntax-highlighting
+            fetch_repo https://github.com/zsh-users/zsh-syntax-highlighting.git "$OH_MY_ZSH/custom/plugins/zsh-syntax-highlighting"
+            # Install zsh-autosuggestions
+            fetch_repo https://github.com/zsh-users/zsh-autosuggestions "$OH_MY_ZSH/custom/plugins/zsh-autosuggestions"
 
             # Symbolic link for shell folder
             make_link "$DOTFILES/shell" "$HOME/.shell"
