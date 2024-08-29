@@ -34,6 +34,7 @@ export RLWRAP_HOME="${HOME}/.rlwrap"
 pathprepend "${HOME}/bin" PATH
 pathprepend "${HOME}/usr/bin" PATH
 pathprepend "${HOME}/.local/bin" PATH
+pathprepend "${HOME}/.atuin/bin" PATH
 
 # The current directory should never be in $PATH
 pathremove "." PATH
